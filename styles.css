@@ -266,7 +266,7 @@ h3 {
 /* Our Menu */
 
 #menu {
-    height: 100vh;
+    height: auto;
     z-index: 3;
     position: relative;
     overflow: hidden;
