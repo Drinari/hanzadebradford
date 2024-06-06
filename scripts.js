@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+        // Плавное появление элементов при загрузке
+    const elements = document.querySelectorAll('.hero-content, section, nav, .top-bar');
+    elements.forEach(element => {
+        element.style.opacity = 0;
+        element.style.transform = 'translateY(20px)';
+    });
+
     // Плавная прокрутка для меню
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
