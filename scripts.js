@@ -100,30 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("currentYear").innerText = new Date().getFullYear();
 
-// active menu after scrolling
-
-// Функция для установки класса active на активной вкладке
-function setActiveTab() {
-    const tabs = document.querySelectorAll('.tab-button');
-    const scrollPosition = window.scrollY;
-
-    tabs.forEach(tab => {
-        const section = document.querySelector(tab.getAttribute('data-tab'));
-        if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            tab.classList.add('active');
-        }
-    });
-}
-
-// Устанавливаем активную вкладку при загрузке страницы
-window.addEventListener('DOMContentLoaded', setActiveTab);
-
-// Обновляем активную вкладку при прокрутке страницы
-window.addEventListener('scroll', setActiveTab);
-
 
 
 
