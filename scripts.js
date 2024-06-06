@@ -40,23 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Плавное появление элементов при загрузке
-    const elements = document.querySelectorAll('.hero-content, section, nav, .top-bar');
-    elements.forEach(element => {
-        element.style.opacity = 0;
-        element.style.transform = 'translateY(20px)';
-    });
-
-    window.addEventListener('load', () => {
-        elements.forEach((element, index) => {
-            setTimeout(() => {
-                element.style.transition = 'opacity 1s, transform 1s';
-                element.style.opacity = 1;
-                element.style.transform = 'translateY(0)';
-            }, index * 200);
-        });
-    });
-
  // Плавное появление элементов при нажатии на меню
 
     document.addEventListener("DOMContentLoaded", function() {
