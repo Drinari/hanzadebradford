@@ -1,11 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-   
-    // Параллакс-эффект для изображения фона
-    document.addEventListener("scroll", function() {
-        const scrollPosition = window.scrollY;
-        document.querySelector(".hero").style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-    });
-
 
     // Плавная прокрутка для меню
     document.querySelectorAll('nav ul li a').forEach(anchor => {
