@@ -105,3 +105,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Copyright
 document.getElementById("currentYear").innerText = new Date().getFullYear();
+
+//Logo
+document.addEventListener("DOMContentLoaded", function() {
+    const heroContent = document.querySelector(".hero-content");
+    heroContent.classList.add("show");
+});
