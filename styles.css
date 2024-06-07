@@ -554,4 +554,8 @@ footer {
         display: none; /* Показывать карту на больших экранах */
     }
 
+    header {
+    height: auto;
+        }
+
 }
