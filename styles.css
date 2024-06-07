@@ -29,7 +29,6 @@ header {
 }
 
 .background {
-    background: url('background.jpeg') no-repeat center center/cover;
     animation: kenburns 20s infinite;
 }
 
