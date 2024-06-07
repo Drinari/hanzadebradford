@@ -11,7 +11,7 @@ body {
 
 header {
     position: relative;
-    height: auto;
+    height: 100vh;
     overflow: hidden;
     background: black;
 }
@@ -266,7 +266,7 @@ h3 {
 /* Our Menu */
 
 #menu {
-    height: auto;
+    height: 100vh;
     z-index: 3;
     position: relative;
     overflow: hidden;
