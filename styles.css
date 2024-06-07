@@ -23,15 +23,6 @@ header {
     height: 100%;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Even darker overlay */
-}
-
 .background {
     background: url('background.jpeg') no-repeat center center/cover;
     animation: kenburns 20s infinite;
@@ -47,6 +38,15 @@ header {
     100% {
         transform: scale(1);
     }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Even darker overlay */
 }
 
 .hero-content {
