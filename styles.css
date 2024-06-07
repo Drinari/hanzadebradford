@@ -10,6 +10,7 @@ body {
 }
 
 header {
+    padding: 100px 50px;
     position: relative;
     height: 100vh;
     height: auto;
