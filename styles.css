@@ -533,6 +533,8 @@ footer {
         margin-top: calc(8vh); /* Adjust the percentage as needed */
         position: relative;
         z-index: 1;
+        padding-left: 10px; /* Default padding */
+        padding-right: 10px; /* Default padding */
     }
 
     #gallery {
