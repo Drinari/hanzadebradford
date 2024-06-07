@@ -59,6 +59,7 @@ header {
     transition: transform 0.3s ease; /* Apply a smooth transition effect */
 }
 
+
 .top-bar {
     position: absolute;
     top: 0;
