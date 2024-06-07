@@ -29,8 +29,8 @@ header {
 }
 
 .background {
-    animation: kenburns 20s infinite;
     background: url('background.jpeg') no-repeat center center/cover;
+    animation: kenburns 20s infinite;
 }
 
 @keyframes kenburns {
