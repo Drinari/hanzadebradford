@@ -49,22 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Smooth appearance on load
-    const elementsToAppear = document.querySelectorAll('.hero-content, section, nav, .top-bar');
-    elementsToAppear.forEach(element => {
-        element.style.opacity = 0;
-        element.style.transform = 'translateY(20px)';
-    });
 
-    window.addEventListener('load', () => {
-        elementsToAppear.forEach((element, index) => {
-            setTimeout(() => {
-                element.style.transition = 'opacity 1s, transform 1s';
-                element.style.opacity = 1;
-                element.style.transform = 'translateY(0)';
-            }, index * 200);
-        });
-    });
 
 
     // Smooth appearance and scroll on menu click
