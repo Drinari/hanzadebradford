@@ -550,10 +550,6 @@ footer {
         display: flex;
     }
 
-   .hero-content {
-        width: 90%; /* Примерная ширина блока на очень узких мобильных экранах */
-    }
-
     #menu {
         position: relative;
         z-index: 1;
