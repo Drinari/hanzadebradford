@@ -1,11 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Parallax effect for background image
-    document.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY;
-        document.querySelector(".hero").style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-    });
-
     // Smooth scroll for menu
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
