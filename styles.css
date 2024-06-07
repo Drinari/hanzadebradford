@@ -11,9 +11,9 @@ body {
 
 header {
     position: relative;
-    height: auto;
-    background: black;
+    height: 100vh;
     overflow: hidden;
+    background: black;
 }
 
 .hero, .background {
