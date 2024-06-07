@@ -33,9 +33,16 @@ header {
     z-index: 1;
     color: white;
     text-align: center;
-    transform: translateY(-50%);
     max-width: 100%;
-    top: 20%;
+    opacity: 0; /* Initially hide the content */
+    transition: opacity 1s ease, transform 1s ease; /* Apply transition */
+    transform: translateY(20px); /* Initial translateY value */
+}
+
+/* Add a class to trigger the transition */
+.hero-content.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero-content img {
