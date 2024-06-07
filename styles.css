@@ -599,4 +599,23 @@ footer {
      display: block;
     }
 
+    .book-mobile a {
+    background-color: rgb(32, 32, 32);
+    border: 2px solid gray;
+    color: white;
+    padding: 15px 30px; /* Increase padding for larger size */
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 20px; /* Increase font size */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure the link behaves like a block element */
+}
+
+.book-mobile a:hover {
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border-color: #f6df91;
+}
+
+
 }
