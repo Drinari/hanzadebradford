@@ -119,10 +119,10 @@ nav {
 }
 
 .mobile-menu-bar {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 6px;
     background: white;
-    margin: 4px 0;
+    margin: 6px 0;
 }
 
 nav ul {
