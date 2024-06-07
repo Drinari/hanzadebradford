@@ -1,5 +1,6 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-   
+
     // Параллакс-эффект для изображения фона
     document.addEventListener("scroll", function() {
         const scrollPosition = window.scrollY;
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-    
+
 
     // Активная вкладка меню
     document.querySelectorAll('nav ul li a').forEach(link => {
@@ -65,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             element.style.opacity = 0;
             element.style.transform = 'translateY(20px)';
         });
-    
+
         function smoothAppear() {
             elements.forEach((element, index) => {
                 setTimeout(() => {
@@ -75,20 +76,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, index * 200);
             });
         }
-    
+
         // Добавляем обработчик события для каждой ссылки меню
         const links = document.querySelectorAll('nav ul li a');
         links.forEach(link => {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
-    
+
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
-    
+
                 if (targetElement) {
                     // Вызываем функцию для плавного появления элементов
                     smoothAppear();
-                    
+
                     // Прокручиваем к секции
                     targetElement.scrollIntoView({
                         behavior: 'smooth'
@@ -97,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-    
+
 
     // Галерея с эффектом
     const galleryItems = document.querySelectorAll('.gallery-item img');
@@ -158,8 +159,3 @@ window.addEventListener('DOMContentLoaded', setActiveTab);
 
 // Обновляем активную вкладку при прокрутке страницы
 window.addEventListener('scroll', setActiveTab);
-
-
-
-
-    
