@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth; /* Плавный переход при прокрутке */
-}
-
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
