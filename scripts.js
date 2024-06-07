@@ -49,8 +49,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Smooth appearance on load
+    const elementsToAppear = document.querySelectorAll('.hero-content, section, nav, .top-bar');
+    elementsToAppear.forEach(element => {
+        element.style.opacity = 0;
+        element.style.transform = 'translateY(20px)';
+    });
 
+    window.addEventListener('load', () => {
+        elementsToAppear.forEach((element, index) => {
+            setTimeout(() => {
+                element.style.transition = 'opacity 1s, transform 1s';
+                element.style.opacity = 1;
+                element.style.transform = 'translateY(0)';
+            }, index * 200);
+        });
+    });
 
+    // Smooth appearance on menu click
+    function smoothAppear() {
+        elementsToAppear.forEach((element, index) => {
+            setTimeout(() => {
+                element.style.transition = 'opacity 1s, transform 1s';
+                element.style.opacity = 1;
+                element.style.transform = 'translateY(0)';
+            }, index * 200);
+        });
+    }
 
     // Smooth appearance and scroll on menu click
     const menuLinks = document.querySelectorAll('nav ul li a');
@@ -105,9 +130,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Copyright
 document.getElementById("currentYear").innerText = new Date().getFullYear();
-
-//Logo
-document.addEventListener("DOMContentLoaded", function() {
-    const heroContent = document.querySelector(".hero-content");
-    heroContent.classList.add("show");
-});
