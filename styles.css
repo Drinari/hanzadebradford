@@ -52,6 +52,13 @@ header {
     color: #f6df91;
 }
 
+.hero-content img:hover,
+.hero-content h1:hover,
+.hero-content p:hover {
+    transform: scale(1.1); /* Increase the size of the elements when hovering */
+    transition: transform 0.3s ease; /* Apply a smooth transition effect */
+}
+
 .top-bar {
     position: absolute;
     top: 0;
