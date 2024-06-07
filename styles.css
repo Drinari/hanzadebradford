@@ -9,12 +9,11 @@ body {
     background-color: #080808;
 }
 
-
 header {
     position: relative;
-    height: 100hv;
-    background: black;
+    height: 100vh;
     overflow: auto;
+    background: black;
 }
 
 .hero {
