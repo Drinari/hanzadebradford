@@ -16,7 +16,7 @@ body {
 header {
     position: relative;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
     background: black;
 }
 
