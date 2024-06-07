@@ -13,6 +13,7 @@ header {
     position: relative;
     height: auto;
     background: black;
+    overflow: hidden;
 }
 
 .hero, .background {
