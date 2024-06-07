@@ -10,7 +10,6 @@ body {
 }
 
 header {
-    padding: 100px 50px;
     position: relative;
     height: 100vh;
     height: auto;
@@ -57,8 +56,8 @@ header {
 .hero-content img:hover,
 .hero-content h1:hover,
 .hero-content p:hover {
-    transform: scale(2.0); /* Increase the size of the elements when hovering */
-    transition: transform 0.4s ease; /* Apply a smooth transition effect */
+    transform: scale(1.1); /* Increase the size of the elements when hovering */
+    transition: transform 0.3s ease; /* Apply a smooth transition effect */
 }
 
 
@@ -120,10 +119,10 @@ nav {
 }
 
 .mobile-menu-bar {
-    width: 30px;
-    height: 6px;
+    width: 25px;
+    height: 3px;
     background: white;
-    margin: 6px 0;
+    margin: 4px 0;
 }
 
 nav ul {
