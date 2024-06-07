@@ -19,39 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     // Активная вкладка меню
- document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelectorAll('nav ul li a').forEach(el => el.classList.remove('active'));
-                this.classList.add('active');
-            });
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelectorAll('nav ul li a').forEach(el => el.classList.remove('active'));
+            this.classList.add('active');
         });
-
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav ul li a');
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.6 // 60% of the section must be visible
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${id}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        }, observerOptions);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
+    });
 
     // Переключение вкладок меню
     const tabButtons = document.querySelectorAll('.tab-button');
@@ -161,3 +134,32 @@ document.addEventListener("DOMContentLoaded", () => {
 // copyright
 
 document.getElementById("currentYear").innerText = new Date().getFullYear();
+
+// active menu after scrolling
+
+// Функция для установки класса active на активной вкладке
+function setActiveTab() {
+    const tabs = document.querySelectorAll('.tab-button');
+    const scrollPosition = window.scrollY;
+
+    tabs.forEach(tab => {
+        const section = document.querySelector(tab.getAttribute('data-tab'));
+        if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            tab.classList.add('active');
+        }
+    });
+}
+
+// Устанавливаем активную вкладку при загрузке страницы
+window.addEventListener('DOMContentLoaded', setActiveTab);
+
+// Обновляем активную вкладку при прокрутке страницы
+window.addEventListener('scroll', setActiveTab);
+
+
+
+
+    
