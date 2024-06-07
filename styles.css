@@ -258,7 +258,7 @@ h3 {
     .image img {
         margin-bottom: 20px; /* Add spacing between image and text on mobile */
     }
-    
+
 }
 
 /* end of About us */
@@ -542,12 +542,12 @@ footer {
     .modal-content {
         padding: 10px; /* Decrease padding for smaller screens */
     }
-    
+
     .modal .close {
         top: 5px;
         right: 5px;
         font-size: 16px;
-    
+
     }
 
      .contact-section {
