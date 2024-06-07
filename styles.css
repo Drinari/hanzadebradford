@@ -441,6 +441,14 @@ form input[type="submit"]:hover {
     display: block; /* Показывать карту на больших экранах */
 }
 
+book-desctop {
+     display: block; /* Показывать карту на больших экранах */
+}
+
+.book-mobile {
+     display: none;
+}
+
 footer {
     background: #080808;
     padding: 20px;
@@ -564,6 +572,14 @@ footer {
         max-width: 100%; /* Убедиться, что карта не превышает ширину контейнера */
         height: auto; /* Позволить карте подстраивать свою высоту */
         display: none; /* Показывать карту на больших экранах */
+    }
+
+    book-desctop {
+     display: none; /* Показывать карту на больших экранах */
+    }
+
+    .book-mobile {
+     display: block;
     }
 
 }
