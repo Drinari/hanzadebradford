@@ -1,33 +1,47 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Параллакс-эффект для изображения фона
-    document.addEventListener("scroll", function() {
+    // Parallax effect for background image
+    document.addEventListener("scroll", () => {
         const scrollPosition = window.scrollY;
         document.querySelector(".hero").style.backgroundPositionY = `${scrollPosition * 0.5}px`;
     });
 
-
-    // Плавная прокрутка для меню
+    // Smooth scroll for menu
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+            const targetId = this.getAttribute('href');
+            document.querySelector(targetId).scrollIntoView({
                 behavior: 'smooth'
             });
+            setActiveNavLink(this);
         });
     });
 
+    // Set active link in menu
+    function setActiveNavLink(link) {
+        document.querySelectorAll('nav ul li a').forEach(el => el.classList.remove('active'));
+        link.classList.add('active');
+    }
 
-    // Активная вкладка меню
-    document.querySelectorAll('nav ul li a').forEach(link => {
-        link.addEventListener('click', function() {
-            document.querySelectorAll('nav ul li a').forEach(el => el.classList.remove('active'));
-            this.classList.add('active');
+    // Intersection Observer for active menu link
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setActiveNavLink(document.querySelector(`nav ul li a[href="#${entry.target.id}"]`));
+            }
         });
+    }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.6 // 60% of the section must be visible
     });
 
-    // Переключение вкладок меню
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Tab switching
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -41,15 +55,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Плавное появление элементов при загрузке
-    const elements = document.querySelectorAll('.hero-content, section, nav, .top-bar');
-    elements.forEach(element => {
+    // Smooth appearance on load
+    const elementsToAppear = document.querySelectorAll('.hero-content, section, nav, .top-bar');
+    elementsToAppear.forEach(element => {
         element.style.opacity = 0;
         element.style.transform = 'translateY(20px)';
     });
 
     window.addEventListener('load', () => {
-        elements.forEach((element, index) => {
+        elementsToAppear.forEach((element, index) => {
             setTimeout(() => {
                 element.style.transition = 'opacity 1s, transform 1s';
                 element.style.opacity = 1;
@@ -58,49 +72,36 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
- // Плавное появление элементов при нажатии на меню
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const elements = document.querySelectorAll('.hero-content, section, nav, .top-bar');
-        elements.forEach(element => {
-            element.style.opacity = 0;
-            element.style.transform = 'translateY(20px)';
+    // Smooth appearance on menu click
+    function smoothAppear() {
+        elementsToAppear.forEach((element, index) => {
+            setTimeout(() => {
+                element.style.transition = 'opacity 1s, transform 1s';
+                element.style.opacity = 1;
+                element.style.transform = 'translateY(0)';
+            }, index * 200);
         });
+    }
 
-        function smoothAppear() {
-            elements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.style.transition = 'opacity 1s, transform 1s';
-                    element.style.opacity = 1;
-                    element.style.transform = 'translateY(0)';
-                }, index * 200);
-            });
-        }
+    // Smooth appearance and scroll on menu click
+    const menuLinks = document.querySelectorAll('nav ul li a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
 
-        // Добавляем обработчик события для каждой ссылки меню
-        const links = document.querySelectorAll('nav ul li a');
-        links.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
 
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                if (targetElement) {
-                    // Вызываем функцию для плавного появления элементов
-                    smoothAppear();
-
-                    // Прокручиваем к секции
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
+            if (targetElement) {
+                smoothAppear();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
-
-    // Галерея с эффектом
+    // Gallery with modal
     const galleryItems = document.querySelectorAll('.gallery-item img');
     galleryItems.forEach(item => {
         item.addEventListener('click', () => {
@@ -130,32 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenu.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
 });
 
-// copyright
-
+// Copyright
 document.getElementById("currentYear").innerText = new Date().getFullYear();
-
-// active menu after scrolling
-
-// Функция для установки класса active на активной вкладке
-function setActiveTab() {
-    const tabs = document.querySelectorAll('.tab-button');
-    const scrollPosition = window.scrollY;
-
-    tabs.forEach(tab => {
-        const section = document.querySelector(tab.getAttribute('data-tab'));
-        if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            tab.classList.add('active');
-        }
-    });
-}
-
-// Устанавливаем активную вкладку при загрузке страницы
-window.addEventListener('DOMContentLoaded', setActiveTab);
-
-// Обновляем активную вкладку при прокрутке страницы
-window.addEventListener('scroll', setActiveTab);
