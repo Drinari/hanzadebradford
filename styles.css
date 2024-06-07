@@ -1,6 +1,5 @@
-/* Global styles */
 html {
-    scroll-behavior: smooth; /* Smooth scrolling behavior */
+    scroll-behavior: smooth; /* Плавный переход при прокрутке */
 }
 
 body {
@@ -8,10 +7,8 @@ body {
     font-family: 'Roboto', sans-serif;
     color: white;
     background-color: #080808;
-    width: 100%; /* Ensure full width */
 }
 
-/* Header */
 header {
     position: relative;
     height: 100vh;
@@ -27,28 +24,21 @@ header {
     height: 100%;
 }
 
-/* Hero content */
 .hero-content {
     position: relative;
     z-index: 1;
     color: white;
     text-align: center;
+    transform: translateY(-50%);
     max-width: 100%;
-    opacity: 0; /* Initially hide the content */
-    transition: opacity 1s ease, transform 1s ease; /* Apply transition */
-    transform: translateY(20px); /* Initial translateY value */
-}
-
-/* Add a class to trigger the transition */
-.hero-content.show {
-    opacity: 1;
-    transform: translateY(0);
+    top: 20%;
 }
 
 .hero-content img {
     margin-bottom: 20px;
     max-width: 100%;
     height: auto;
+
 }
 
 .hero-content h1 {
@@ -62,22 +52,21 @@ header {
     color: #f6df91;
 }
 
-/* Top bar */
 .top-bar {
     position: absolute;
     top: 0;
-    width: calc(100% - 6em); /* Calculate width with margins */
+    width: 100%;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
     z-index: 100;
-    left: 3em; /* Left margin */
-    right: 3em; /* Right margin */
+    left: 3em; /* Отступ слева */
+    right: 3em; /* Отступ справа */
+    width: calc(100% - 6em); /* Учитываем отступы слева и справа */
 }
 
-/* Contact info and social media */
 .top-bar .contact-info {
     color: white;
     font-size: 16px;
@@ -97,7 +86,6 @@ header {
     transform: scale(1.2); /* Scale up on hover */
 }
 
-/* Navigation */
 nav {
     position: fixed;
     width: 100%;
@@ -161,7 +149,6 @@ nav ul li a.active::after {
     width: 100%;
 }
 
-/* Section styles */
 section {
     padding: 100px 50px;
     text-align: center;
@@ -178,11 +165,13 @@ h2 {
 
 h3 {
     font-size: 1.50em;
-    color: #ecdfb1;
+    color: #ecdfb1; 
 }
 
-/* About us section */
+/* About us */
+
 #about {
+    height: 100vh;
     height: auto;
     background-color: rgb(32, 32, 32);
     position: relative;
@@ -199,47 +188,361 @@ h3 {
 .image,
 .text {
     flex: 1;
-    padding: 50px;
+    padding: 50px; 
 }
 
 .image img {
     max-width: 100%;
     height: auto;
-    border-radius: 40px;
-    transition: transform 0.3s ease;
+    border-radius: 40px; 
 }
 
-.image img:hover {
-    transform: scale(1.1);
+#about-image {
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
 }
+
+#about-image:hover {
+    transform: scale(1.1); /* Example: Increase scale on hover */
+}
+
 
 .text {
-    text-align: justify;
-    font-size: 1.275em;
-    line-height: 1.6;
+    text-align: justify; /* Justify text for a clean appearance */
+    font-size:  1.275em;  /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height for readability */
 }
 
 .text p {
-    margin: 0;
+    margin: 0; /* Remove default margin for paragraphs */
 }
 
-/* Media queries */
 @media only screen and (max-width: 768px) {
     .about-content {
-        flex-direction: column-reverse;
-        align-items: center;
+        flex-direction: column-reverse; /* Reverse the order of items on mobile */
+        align-items: center; /* Center items horizontally */
     }
 
     .image,
     .text {
-        width: 100%;
-        text-align: center;
-        padding: 0;
+        width: 100%; /* Make each item take full width on mobile */
+        text-align: center; /* Center text on mobile */
+        padding: 0; /* Remove padding on mobile */
     }
 
     .image img {
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Add spacing between image and text on mobile */
+    }
+    
+}
+
+/* end of About us */
+
+/* Our Menu */
+
+#menu {
+    height: 100vh;
+    height: auto;
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: rgb(32, 32, 32);
+    border: 2px solid gray;
+    color: white;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 20px;
+}
+
+.tab-button.active {
+    background: #d6cba4;
+    color: rgb(0, 0, 0);
+    border-color: #f6df91;
+}
+
+.tab-button:hover {
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border-color: #f6df91;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.menu-item {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid gray;
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 2.00em;
+    color: #ecdfb1; 
+    font-family: "Playfair Display", serif;
+}
+
+/* Hover effect for each menu item */
+.menu-item:hover {
+    transform: scale(1.05); /* Increases the size of the menu item */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adds a smooth transition effect */
+    border-color: #f6df91;
+    background-color: rgb(32, 32, 32);
+}
+
+/* end of Our Menu */
+
+#gallery {
+    background-color: rgb(32, 32, 32);
+    z-index: 4;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    max-width: 300px%;
+    max-height: 400px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+#contacts {
+    background-color: rgb(32, 32, 32);
+    z-index: 5;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5%;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensures the form takes the full width of its container */
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: 2px solid black; /* Black border */
+    background-color: transparent; /* Transparent background */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+form input:hover, form textarea:hover {
+    border-color: #f6df91; /* Darker border color on hover */
+}
+
+form input[type="submit"] {
+    padding: 20px 40px;
+    margin-top: 20px;
+    color: white;
+    border: 2px solid black; /* Black border */
+    background-color: transparent; /* Transparent background */
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #f6df91; ; /* Darker background color on hover */
+    color: #000000; /* Lighter text color on hover */
+    border-color: #333; /* Darker border color on hover */
+}
+
+.social-media-contact a img {
+    width: 60px;
+    height: 60px;
+    margin-right: 25px;
+    margin-top: 20px; /* Add space above the social media icons */
+    margin-bottom: 20px; /* Add space below the social media icons */
+}
+
+.social-media-contact a img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.map-container {
+    flex: 1;
+    max-width: 100%; /* Убедиться, что карта не превышает ширину контейнера */
+    height: auto; /* Позволить карте подстраивать свою высоту */
+    display: block; /* Показывать карту на больших экранах */
+}
+
+footer {
+    background: #080808;
+    padding: 20px;
+    text-align: center;
     }
 
-    /* Other styles for smaller screens */
+/* Модальное окно */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-content img {
+    width: 100%; /* Ensure images fill the available width within their container */
+    max-width: 800px; /* Maintain the maximum width of 800px */
+    height: auto;
+}
+
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(8, 8, 8, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        text-align: right;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    #menu {
+        position: relative;
+        z-index: 1;
+        padding-left: 10px; /* Default padding */
+        padding-right: 10px; /* Default padding */
+        height: auto;
+    }
+
+    #gallery {
+        height: auto;
+    }
+
+    .modal-content {
+        padding: 10px; /* Decrease padding for smaller screens */
+    }
+    
+    .modal .close {
+        top: 5px;
+        right: 5px;
+        font-size: 16px;
+    
+    }
+
+     .contact-section {
+        flex-direction: row; /* Arrange elements horizontally */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .contact-form {
+        flex: 1;
+        margin-right: 10px; /* Add margin to the right */
+    }
+
+    .map-container {
+        flex: 1;
+        max-width: 100%; /* Убедиться, что карта не превышает ширину контейнера */
+        height: auto; /* Позволить карте подстраивать свою высоту */
+        display: none; /* Показывать карту на больших экранах */
+    }
+
 }
