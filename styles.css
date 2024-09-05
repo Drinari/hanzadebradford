@@ -618,33 +618,20 @@ footer {
 }
 
 
-.pdf-container {
-    background-color: #1e1e1e; /* Dark gray background for the container */
-    border-radius: 8px;
-    padding: 10px;
-    margin: 20px auto;
-    max-width: 1000px; /* Max width of the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Ensures content does not overflow the container */
-}
-
-@media (max-width: 768px) {
-    .pdf-container {
-        padding: 5px;
-        margin: 10px;
-        max-width: 100%;
-    }
-
-    .pdf-container embed {
-        height: 500px; /* Adjust height for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .pdf-container embed {
-        height: 400px; /* Further adjust height for very small screens */
-    }
-}
+        .pdf-container {
+            width: 100%;
+            height: 80vh; /* Высота контейнера, можно настроить */
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
 
 }
