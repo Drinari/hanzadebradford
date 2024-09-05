@@ -617,20 +617,5 @@ footer {
     border-color: #f6df91;
 }
 
-.pdf-container {
-    width: 100%; /* Full width of the viewport */
-    height: 90vh; /* Height set to 90% of the viewport height */
-    margin: 20px auto;
-    background-color: #fff; /* White background for the container */
-    border: 1px solid #ddd; /* Light border for the container */
-    padding: 10px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-
 
 }
