@@ -208,7 +208,7 @@ h3 {
 
 /* About us */
 
-#about, #menu {
+#about {
     height: 95vh;
     height: auto;
     background-color: rgb(32, 32, 32);
