@@ -617,5 +617,37 @@ footer {
     border-color: #f6df91;
 }
 
+            .pdf-container {
+            background-color: #f5f5dc; /* Beige color */
+            padding: 20px;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            box-sizing: border-box; /* Include padding in width/height */
+        }
+        .pdf-embed {
+            width: 100%;
+            height: 90vh; /* Adjust as needed */
+            border: none; /* Remove border if any */
+        }
+        .styled-link {
+            display: inline-block; /* Allows padding and margin */
+            color: #007bff; /* Link color */
+            font-size: 16px; /* Font size */
+            font-family: Arial, sans-serif; /* Font family */
+            text-decoration: none; /* Remove underline */
+            padding: 10px 15px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #e7f0ff; /* Light blue background */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+        }
+        .styled-link:hover {
+            color: #0056b3; /* Darker link color on hover */
+            background-color: #cce5ff; /* Change background on hover */
+        }
+        .styled-link:active {
+            color: #004085; /* Even darker color when link is clicked */
+            background-color: #b8daff; /* Slightly different background when clicked */
+        }
+
 
 }
