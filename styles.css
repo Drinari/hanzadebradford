@@ -616,15 +616,12 @@ footer {
     color: white;
     border-color: #f6df91;
 }
-    #menupdf {
-    background-color: beige; /* Beige background color */
-    width: 100%; /* Makes the div full-width */
-    padding: 20px; /* Adds space inside the div */
-    font-size: 1.5em; /* Makes the text bigger */
-    border: 1px solid #ddd; /* Adds a light border around the div */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
-    border-radius: 8px; /* Rounds the corners of the div */
-    text-align: center; /* Centers the text inside the div */
+
+
+#menupdf {
+    text-align: justify; /* Justify text for a clean appearance */
+    font-size:  1.19em;  /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height for readability */
 }
 
 
