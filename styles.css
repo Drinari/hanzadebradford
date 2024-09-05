@@ -208,7 +208,7 @@ h3 {
 
 /* About us */
 
-#about {
+#about, #menu {
     height: 95vh;
     height: auto;
     background-color: rgb(32, 32, 32);
@@ -617,10 +617,4 @@ footer {
     border-color: #f6df91;
 }
 
-
-#menupdf {
-    text-align: justify; /* Justify text for a clean appearance */
-    font-size:  1.19em;  /* Adjust font size as needed */
-    line-height: 1.5; /* Adjust line height for readability */
-}
 
