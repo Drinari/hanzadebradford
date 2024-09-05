@@ -618,20 +618,4 @@ footer {
 }
 
 
-        .pdf-container {
-            width: 100%;
-            height: 80vh; /* Высота контейнера, можно настроить */
-            margin: 0 auto;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-
 }
