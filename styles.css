@@ -626,7 +626,6 @@ footer {
     transition: background 0.3s;
     font-size: 20px; /* Increase font size */
     text-decoration: none; /* Remove underline */
-    display: inline-block; /* Ensure the link behaves like a block element */
 }
 
 #menupdf a:hover {
