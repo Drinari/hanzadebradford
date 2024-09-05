@@ -246,8 +246,8 @@ h3 {
 
 .text {
     text-align: justify; /* Justify text for a clean appearance */
-    font-size:  1.18em;  /* Adjust font size as needed */
-    line-height: 1.4; /* Adjust line height for readability */
+    font-size:  1.19em;  /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height for readability */
 }
 
 .text p {
@@ -618,7 +618,7 @@ footer {
 }
 
         <div class="pdf-container">
-        <embed src="Menu_Hsanzade.pdf" type="application/pdf" width="100%" height="600px" />
+        <embed src="Menu_Hsanzade.pdf" type="application/pdf" width="100%" height="100%" />
     </div>
 
 
