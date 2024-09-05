@@ -617,5 +617,9 @@ footer {
     border-color: #f6df91;
 }
 
+        <div class="pdf-container">
+        <embed src="Menu_Hsanzade.pdf" type="application/pdf" width="100%" height="600px" />
+    </div>
+
 
 }
