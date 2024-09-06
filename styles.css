@@ -210,7 +210,7 @@ h3 {
 /* Our Menu */
 
 #menu {
-    height: 100vh;
+    height: 50vh;
     z-index: 3;
     position: relative;
     overflow: hidden;
@@ -558,7 +558,7 @@ footer {
     }
 
     #gallery {
-        width: 70%;
+        width: 75%;
         height: auto;
     }
 
