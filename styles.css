@@ -558,7 +558,7 @@ footer {
     }
 
     #gallery {
-        width: 100%;
+        width: 80%;
         height: auto;
     }
 
@@ -616,6 +616,7 @@ footer {
     color: white;
     border-color: #f6df91;
 }
+    }
 
         #menupdf a {
     background-color: rgb(32, 32, 32);
