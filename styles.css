@@ -290,6 +290,7 @@ h3 {
 }
 
 .gallery-item {
+    max-width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -479,8 +480,8 @@ footer {
     #menu {
         position: relative;
         z-index: 1;
-        padding-left: 70px; /* Default padding */
-        padding-right: 70px; /* Default padding */
+        padding-left: 30px; /* Default padding */
+        padding-right: 30px; /* Default padding */
         height: auto;
     }
 
