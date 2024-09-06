@@ -550,8 +550,8 @@ footer {
     display: flex;
     justify-content: center; /* Center the button horizontally */
     align-items: center; /* Center the button vertically if necessary */
-    margin-top: 100px; /* Add margin to move the button down */
-    height: 100vh; /* Set the height to ensure full vertical centering */
+    margin-top: 30px; /* Add margin to move the button down */
+    height: 95vh; /* Set the height to ensure full vertical centering */
 }
 
 #menupdf a {
