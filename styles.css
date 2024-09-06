@@ -479,8 +479,8 @@ footer {
     #menu {
         position: relative;
         z-index: 1;
-        padding-left: 10px; /* Default padding */
-        padding-right: 10px; /* Default padding */
+        padding-left: 70px; /* Default padding */
+        padding-right: 70px; /* Default padding */
         height: auto;
     }
 
