@@ -227,7 +227,7 @@ h3 {
     background-color: rgb(32, 32, 32);
     border: 2px solid gray;
     color: white;
-    padding: 20px 30px;
+    padding: 10px 20px;
     cursor: pointer;
     transition: background 0.3s;
     font-size: 20px;
