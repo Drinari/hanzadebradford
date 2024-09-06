@@ -206,6 +206,79 @@ h3 {
     color: #ecdfb1; 
 }
 
+
+/* Our Menu */
+
+#menu {
+    height: 100vh;
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: rgb(32, 32, 32);
+    border: 2px solid gray;
+    color: white;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 20px;
+}
+
+.tab-button.active {
+    background: #d6cba4;
+    color: rgb(0, 0, 0);
+    border-color: #f6df91;
+}
+
+.tab-button:hover {
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border-color: #f6df91;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.menu-item {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid gray;
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 2.00em;
+    color: #ecdfb1; 
+    font-family: "Playfair Display", serif;
+}
+
+/* Hover effect for each menu item */
+.menu-item:hover {
+    transform: scale(1.05); /* Increases the size of the menu item */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adds a smooth transition effect */
+    border-color: #f6df91;
+    background-color: rgb(32, 32, 32);
+}
+
+/* end of Our Menu */
+
 /* About us */
 
 #about {
